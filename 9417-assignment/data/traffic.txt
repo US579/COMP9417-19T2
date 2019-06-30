@@ -1,0 +1,79 @@
+Problem
+======
+
+The problem is to learn to switch a set of traffic lights to reduce the
+delay at lights. 
+
+To start, traffic is flowing only one way on two intersecting roads
+controlled by a set of traffic lights. Cars enter the road some way from the
+intersection at random intervals, ie when time%(rnd.nextInt(10)+5)==0. Time
+is just a clock counter that is incremented at each step. 
+
+The simulator moves the cars one space along the road at each time-step. The
+road length can be about 100 units, one unit of road holds one car. The cars
+only travel in only one direction and are removed from the road when they
+reach the boundary of the simulated region. If a car is stopped by a red
+light, it cannot move forward. The cars cannot occupy the same space. Other
+cars therefore queue behind stopped cars. 
+
+A controller can change the lights, but only after waiting at least three
+time-steps since the last change. 
+
+The first part of the assignment is to write a program that 
+1.	Simulates the traffic generation, flow and traffic lights
+2.	Displays the simulation on the screen
+3.	Controls the lights using a fixed change time of 10 time-steps
+4.	Uses a reinforcement learning algorithm to improve on 3.
+
+The performance measure is the sum of the number of time-steps the number of
+cars is queued in a period of time, say per 1000 time-steps. We can assume
+that a contiguous line of cars at a stop sign are stopped. 
+
+For the reinforcement learner, the following MDP specification and Q
+learning parameters can be used;
+
+ 
+State = 
+closest car position from intersection for road 1 (0-8, 9 if no cars) X
+closest car position from intersection for road 2 (0-8, 9 if no cars X
+light setting (ie 0-green, 1 red for one of the roads) X
+light delay (0-3)
+
+Two actions: decide to switch or not.
+
+Reward -1.0 if a car is stopped at a red light on either road, zero
+otherwise.
+
+Optimise discounted sum of future reward.
+
+Use discount factor: gamma = .9
+
+Use learning rate: alpha = .1
+
+Epsilon-greedy exploration 10%
+
+Plot and compare performance measures for both the fixed switching and
+learnt policies. 
+
+Suggested extensions 
+===============
+1.	Include amber phase in lights
+2.	Include 2-way traffic
+3.	Test different traffic intensities and generating functions
+4.	Vary RL parameters
+5.	Try different state space descriptions
+6.	Try different reward functions eg -1 per car on the grid
+7.	Try different exploration strategies
+8.	Include extra lanes
+9.	Increase intersections to 4
+10.	Improve learning speed with eligibility traces
+11.	Model speed of vehicles and inter-car spacing
+12.	Model lane changing.
+13.	Model the effect of an accident.
+14.	Include proportion of traffic turning at intersections
+15.	Include pedestrians
+16.	Use function approximation eg nearest neighbour or a neural network
+
+
+Reinforcement Learning reference:
+http://www.cs.ualberta.ca/%7Esutton/book/ebook/the-book.html
