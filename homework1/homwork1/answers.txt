@@ -98,9 +98,9 @@
 --- classification problem, CountVectorizer pre-processing was
 --- applied to the snippet data to:
 
-(1) generate the vocabulary and count the frequency of words independently for the training and test sets
+--- (1) generate the vocabulary and count the frequency of words independently for the training and test sets
 --- (2) generate the vocabulary and count the frequency of words overall for the combined training and test sets
---- (3) generate the vocabulary overall for the combined training and test sets, and count the frequency of words independently for the training and test sets
+(3) generate the vocabulary overall for the combined training and test sets, and count the frequency of words independently for the training and test sets
 --- (4) generate the vocabulary independently for the training and test sets, and count the frequency of words overall for the combined training and test sets
 
 *** Part 2:
