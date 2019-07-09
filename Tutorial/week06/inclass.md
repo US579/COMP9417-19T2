@@ -28,7 +28,6 @@ dot的分类取决于其与法向量的夹角
 2. cycle through all the dateset 
    - (a) if sum(w_i * x) > 0  x -> p do nothing classify correct
    - (b) if sum(w_i * x) < 0  x -> n do nothing classify correct
-   - (c) if sum(w_i * x) > 0  x -> n make angle bigger
-   - (d) if sum(w_i * x) > 0  x -> n make angle smaller
+   - (c) if sum(w_i * x) > 0  x -> n make angle bigger  which means that w = w - x_i
+   - (d) if sum(w_i * x) > 0  x -> n make angle smaller  which means that w = w + x_i
 
-   
