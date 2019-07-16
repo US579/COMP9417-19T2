@@ -31,3 +31,6 @@ dot的分类取决于其与法向量的夹角
    - (c) if sum(w_i * x) > 0  x -> n make angle bigger  which means that w = w - x_i
    - (d) if sum(w_i * x) > 0  x -> n make angle smaller  which means that w = w + x_i
 
+GD for liner regression
+
+relu 同  sigmod function 比sigmod better
