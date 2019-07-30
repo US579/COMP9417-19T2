@@ -15,8 +15,8 @@
 *** Last revised: Fri Jul 26 17:17:14 AEST 2019
 --- 
 --- Please add your details on the next two lines.
-*** Student Name:
-*** Student Number: 
+*** Student Name: Wanze Liu
+*** Student Number: Z5137189
 --------------------------------------------------------------
 
 *** ANSWERS:
@@ -36,6 +36,19 @@
 *** Question 1(a) [1 mark] 
 --- Copy/paste below the output from running the code in the notebook.
 --- DO NOT EDIT the table in any way !!!
+                                             Decision Tree Results                                              
+----------------------------------------------------------------------------------------------------------------
+    Dataset     |     Default      |        0%        |       20%        |       50%        |       80%        |
+----------------------------------------------------------------------------------------------------------------
+
+balance-scale   |  36.70% ( 2)     |  76.06% ( 2)     |  71.28% (12)     |  65.43% (27)     |  18.09% (27)     |
+
+primary-tumor   |  25.49% ( 2)     |  37.25% (12)     |  42.16% (12)     |  43.14% (12)     |  26.47% ( 7)     |
+
+glass           |  44.62% ( 2)     |  69.23% ( 7)     |  66.15% (22)     |  35.38% (17)     |  29.23% (17)     |
+
+heart-h         |  35.96% ( 2)     |  67.42% ( 7)     |  78.65% (22)     |  56.18% (17)     |  20.22% (27)     |
+
 
 
 *** Question 1(b) [1 mark]
@@ -47,7 +60,7 @@
 --- training set examples at the leaf. By increasing the value of the
 --- "min_samples_leaf" parameter we can expect this to:
 
---- (1) decrease overfitting by decreasing the number of examples at any leaf
+(1) decrease overfitting by decreasing the number of examples at any leaf
 --- (2) decrease overfitting by increasing the number of examples at any leaf
 --- (3) increase overfitting by decreasing the number of examples at any leaf
 --- (4) increase overfitting by increasing the number of examples at any leaf
@@ -61,7 +74,7 @@
 
 --- (1) no
 --- (2) yes, for 1/4 of the datasets
---- (3) yes, for 2/4 of the datasets
+(3) yes, for 2/4 of the datasets
 --- (4) yes, for 3/4 of the datasets
 --- (5) yes, for 4/4 of the datasets
 
