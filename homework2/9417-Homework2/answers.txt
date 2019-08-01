@@ -87,19 +87,22 @@ heart-h         |  35.96% ( 2)     |  67.42% ( 7)     |  78.65% (22)     |  56.1
 --- any changes from your final code as it ran in the notebook !!!
 
 --- setup for the current step  [2 marks]
-layer_input =  []
-weight = []
+layer_input =  numpy.concatenate((outputs[step], X[:,step, :]), axis=1)
+if step == self.input_size -1:
+	weight = self.weights[1][:64,:]
+else:
+	weight = self.weights[0][:64,:]
 
 --- calculate gradients  [1 mark]
-gradients, dW, db = [], [], []
+gradients, dW, db =  self.derivatives_of_hidden_layer(previous_gradients, layer_output, layer_input, weight)
 
 --- update weights  [2 marks]
-self.weights[0] += 0
-self.biases[0] += 0
+self.weights[0] +=  self.learning_rate / X.shape[0] * dW
+self.biases[0] += self.learning_rate/ X.shape[0] * db
 
 --- setup for the next step  [2 marks]
-previous_gradients = []
-layer_output = []
+previous_gradients = gradients
+layer_output = outputs[step]
 
 *** END
 --------------------------------------------------------------
