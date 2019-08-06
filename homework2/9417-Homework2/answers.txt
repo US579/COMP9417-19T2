@@ -60,8 +60,8 @@ heart-h         |  35.96% ( 2)     |  67.42% ( 7)     |  78.65% (22)     |  56.1
 --- training set examples at the leaf. By increasing the value of the
 --- "min_samples_leaf" parameter we can expect this to:
 
---- (1) decrease overfitting by decreasing the number of examples at any leaf
-(2) decrease overfitting by increasing the number of examples at any leaf
+(1) decrease overfitting by decreasing the number of examples at any leaf
+--- (2) decrease overfitting by increasing the number of examples at any leaf
 --- (3) increase overfitting by decreasing the number of examples at any leaf
 --- (4) increase overfitting by increasing the number of examples at any leaf
 
